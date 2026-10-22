@@ -1,0 +1,43 @@
+@model IEnumerable<FootballClub.Models.Player>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Players List</title>
+</head>
+<body>
+<h1>All Players List</h1>
+<a href="/Player/Add">New Player</a>
+
+<div>
+    <table class="table" border="1">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Position</th>
+            <th>Club</th>
+            <th>Action</th>
+        </tr>
+        
+        
+        @foreach (var p in Model)
+        {
+            <tr>
+                <td>@p.id</td>
+                <td>@p.name</td>
+                <td>@p.age</td>
+                <td>@p.position</td>
+                <td>@p.currentClub</td>
+                <td><a href="/Player/Edit">Edit</a></td>
+            </tr>
+        }
+        
+    </table>
+</div>
+</body>
+</html>

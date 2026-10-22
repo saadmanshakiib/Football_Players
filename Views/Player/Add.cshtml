@@ -1,0 +1,24 @@
+@model IEnumerable<FootballClub.Models.Player>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Add New Player</title>
+</head>
+<body>
+<div>
+    <form action="/Player/Add" method="POST">
+        <input type="text" name="name" placeholder="Player Name"/>
+        <input type="number" name = "age" placeholder="Player Age"/>
+        <input type="text" name="position" placeholder="Player Position"/>
+        <input type="text" name="currentClub" placeholder="Player Club Name"/>
+        <button type="submit" class="alert-success">Add</button>
+    </form>
+</div>
+</body>
+</html>
